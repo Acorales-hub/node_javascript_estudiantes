@@ -23,7 +23,11 @@ try
 {
     console.clear();//Limpia el terminal.
 
-    showSizeArray();//Mustra el tamaño de los arrglos definidos en la declaración de variables.
+    //console.log('Table of sizes');
+    //showSizeArray();//Mustra el tamaño de los arrglos definidos en la declaración de variables.
+    showFruit();
+    
+
     //forOf();
     //forIn();
 
@@ -37,17 +41,18 @@ try
 function showFruit()
 {
     //Loop para ver el contenido de fuit[]
-    for(i=0; i<= fruit.length-1;i++)
-    {
-        console.log(fruit[i]);
-    }
-
-    console.log('Extrae el último elemento:'+fruit.pop());//.pop() extrae el último elemento del vector
+    //for(i=0; i<= fruit.length-1;i++)
+    //{
+      //  console.log('\t['+i+']['+fruit[i]+']');
+    //}
+    console.log("Tabla Inicial");
+    console.table(fruit);
+    console.log('-Último elemento de la tabla inicial: '+fruit.pop());//.pop() extrae el último elemento del vector
     fruit.push('Guanabana');//es igual a fruits[fruits.length] = ...., .push() agrega un elemento al final del vector
-    console.log('Último elemento:'+fruit.pop());//Muestra el último elemento de la pila
-    console.log('Primer elemento:'+fruit.shift());//Muestra el primer elemento de la pila
+    console.log('-Último elemento agregado a la tabla inicial: '+fruit.pop());//Muestra el último elemento de la pila
+    console.log('-Primer elemento de la tabla inicial:'+fruit.shift());//Muestra el primer elemento de la pila
     fruit.unshift('Mango');//Agrega un elemento al principio de la pila
-    console.log('Add primer elemento:'+fruit.shift().yellow);
+    console.log('-Primer elemento agregado ala tabla inicial:'+fruit.shift().yellow);
     fruit[2]='Lechoza';//Reemplazo de valor en el índice 2
     console.table(fruit);//Muestra el contenido del vector.
     //console.log(fruit.length-1);
