@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "color-hash": "^2.0.2",
+    "colors": "^1.4.0",
+    "package": "^1.0.1"
+  }
+}
