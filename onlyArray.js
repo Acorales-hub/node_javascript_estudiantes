@@ -1,43 +1,29 @@
-/*[.::Javascript para estudiantes::.]------------------------------------------------
-|Profesor: Ing. Asdrubal José Corales Pérez, +58-4811678, asdrubalcorales@gmail.com |
-|Tema: arreglos en Javascript                                                       |
------------------------------------------------------------------------------------*/
+/*[.::Javascript para estudiantes::.]----------------------------------------------------------
+|Profesor: Ing. Asdrubal José Corales Pérez, +58-4811678, asdrubalcorales92@gmail.com         |
+|Tema: arreglos en Javascript (.push(),.pop(),.shift(),.unshift(), vacios,índices, matrices)  |
+---------------------------------------------------------------------------------------------*/
 
 //Archivos Externos:
-const color = require('colors'); //Add color
-const fs = require('fs');//File system
+    const color = require('colors'); //Add color.
+    const fs = require('fs');//File system.
 
 //Declaración de Varibles:
-//let avfrutas = new array();//Declaración de arreglos vacios.
-//let avFrutas = [];        //otra declaración de arreglos vacios
-//let arr = new Array("Apple", "Pear", "etc");
-
-let fruit = ['Cambur','Manzana','Naranja','Pera'];
-let fruta =['Fruta',{name:'Apple',pais:'Canada',cod:'02173'},'Empresa',{name:'Cada',pais:xPais,cod:'+58'}];
-let vector =['Neo','Trinitry','Morfeo','Agnt Smith','Nabuconodosor','Mause','Cerrajero','Oraculo','KARE'];
-let matrix =[[1,2,3],[4,5,6],[7,8,9]];
-let sizeVector = [];//vector vacio que contendrá el tamaño de los arreglos
-let i;
+    //let avfrutas = new array();//Declaración de arreglos vacios.
+    //let avFrutas = [];        //otra declaración de arreglos vacios
+    //let arr = new Array("Apple","Pear","etc");
+    let xPais = ['Venezuela']
+    let fruit = ['Cambur','Manzana','Naranja','Pera'];
+    let fruta =['Fruta',{name:'Apple',pais:'Canada',cod:'02173'},'Empresa',{name:'Cada',pais:xPais,cod:'+58'}];
+    let vector =['Neo','Trinitry','Morfeo','Agnt Smith','Nabuconodosor','Mause','Cerrajero','Oraculo','KARE'];
+    let matrix =[[1,2,3],[4,5,6],[7,8,9]];
+    let sizeVector = [];//vector vacio que contendrá el tamaño de los arreglos.
+    let i,op;
 
 try
 {
-    console.clear();
+    console.clear();//Limpia el terminal.
 
-
-    console.log('Último elemento:'+fruit.pop());
-    console.log('Primer elemento:'+fruit.shift());
-    fruit.unshift('Mango');
-    console.log('Add primer elemento:'+fruit.shift().yellow);
-    fruit[2]='Lechoza';//Reemplazo del valor en el índice 2
-    console.table(fruit);
-    //console.log(fruit.length-1);
-    console.table(fruta);
-    console.log('Resultado con at es '+fruit.at(-1)+',Resultado con length-1 es '+fruit[fruit.length-1]);
-    console.log('Tamaño del vector frutas:'+fruta.length);
-    console.log('Tamaño del vector fruit:'+fruit.length);
-    console.log('Matrix size:'+matrix.length);
-
-
+    showSizeArray();//Mustra el tamaño de los arrglos definidos en la declaración de variables.
     //forOf();
     //forIn();
 
@@ -55,8 +41,24 @@ function showFruit()
     {
         console.log(fruit[i]);
     }
+
     console.log('Extrae el último elemento:'+fruit.pop());//.pop() extrae el último elemento del vector
     fruit.push('Guanabana');//es igual a fruits[fruits.length] = ...., .push() agrega un elemento al final del vector
+    console.log('Último elemento:'+fruit.pop());//Muestra el último elemento de la pila
+    console.log('Primer elemento:'+fruit.shift());//Muestra el primer elemento de la pila
+    fruit.unshift('Mango');//Agrega un elemento al principio de la pila
+    console.log('Add primer elemento:'+fruit.shift().yellow);
+    fruit[2]='Lechoza';//Reemplazo de valor en el índice 2
+    console.table(fruit);//Muestra el contenido del vector.
+    //console.log(fruit.length-1);
+}
+
+function showFruta()
+{
+    console.table(fruta);
+    console.log('Resultado con at es '+fruit.at(-1)+',Resultado con length-1 es '+fruit[fruit.length-1]);
+    console.log('Tamaño del vector frutas:'+fruta.length);
+    console.log('Tamaño del vector fruit:'+fruit.length);
 }
 
     function showSizeArray()
