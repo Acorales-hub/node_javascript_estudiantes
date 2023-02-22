@@ -3,21 +3,21 @@
 |Tema: arreglos en Javascript                                                       |
 -----------------------------------------------------------------------------------*/
 
+//Archivos Externos:
+const color = require('colors'); //Add color
+const fs = require('fs');//File system
 
-
-const color = require('colors')
-//const fs = require('fs');
-//let avfrutas = new array();//av:arreglos vacios
+//Declaración de Varibles:
+//let avfrutas = new array();//Declaración de arreglos vacios.
+//let avFrutas = [];        //otra declaración de arreglos vacios
 //let arr = new Array("Apple", "Pear", "etc");
-//let avFrutas = [];//otra declaración de arreglos vacios
+
 let fruit = ['Cambur','Manzana','Naranja','Pera'];
-let xPais = 'Venezuela';
 let fruta =['Fruta',{name:'Apple',pais:'Canada',cod:'02173'},'Empresa',{name:'Cada',pais:xPais,cod:'+58'}];
-let i;
 let vector =['Neo','Trinitry','Morfeo','Agnt Smith','Nabuconodosor','Mause','Cerrajero','Oraculo','KARE'];
 let matrix =[[1,2,3],[4,5,6],[7,8,9]];
-let sizeVector = [];
-
+let sizeVector = [];//vector vacio que contendrá el tamaño de los arreglos
+let i;
 
 try
 {
