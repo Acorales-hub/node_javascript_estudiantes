@@ -22,12 +22,10 @@
 try
 {
     console.clear();//Limpia el terminal.
-
-    //console.log('Table of sizes');
-    
     showFruit();
     showFruta();
     showMatriz();
+    xVector();
     showSizeArray();//Mustra el tamaño de los arrglos definidos en la declaración de variables.
     //forOf();
     //forIn();
@@ -37,7 +35,7 @@ try
         console.log('Sorry!'.bold.red);
         console.error('Ha ocurrido un error!'+err.name);
         console.info(err.message);
-    }
+    }finally{console.info('Fin del programa!'.cyan);}
 
 function showFruit()
 {
@@ -77,7 +75,17 @@ function showFruta()
     console.log('Tamaño del vector fruit:'+fruit.length);
 }
 
-    function showSizeArray()
+function xVector()
+{
+    console.log('-----------------------[VECTOR PELICULA MATRIX]-----------------------------'.rainbow)
+    console.table(vector);
+    vector.splice(2,0,'Asdrubal');//Add elemento al vector 'vector.splice(posicion,elemento a borrar,valor a agregar)'
+    console.table(vector);
+    vector.splice(8,1);//borra un elemento a partir del índice 8
+    console.table(vector); 
+}
+
+function showSizeArray()
 {
     console.log('-----------------------[TAMAÑO DE LOS VECTORES]-----------------------------'.rainbow)
     sizeVector.push(`${fruit.length}`);
