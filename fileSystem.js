@@ -3,7 +3,9 @@
 |Tema: Operaciones útiles con File System: Crear,Eliminar,Leer,Modificar,Copiar,Cambiar nombre de archivo   |
 -----------------------------------------------------------------------------------------------------------*/
 //Nota: todos los métodos (funciones) de este módulo son asíncronos, pero se pueden agregar métodos síncronos
-//agregando la palabra Sync a sal final de sus nombres, ejemplo fs.rename() -> fs.renameSync().
+//agregando la palabra Sync a sal final de sus nombres, ejemplo fs.rename() -> fs.renameSync(). Si usas Sync
+//no es necesario que uses la función de control, basta con asigar el resultado de la función a una variable
+//local que puedes usar por ejemplo en console.log().
 
 //Declaración de variables más archivos y/o modulos externos:
 const fs = require('fs');
@@ -11,9 +13,9 @@ const color = require('colors');//Add color
 let err, contenido,error,xErr,errX;
 
     //Funciones:
-    //leeArchivo();
-    //crearArchivo();
-    //reNombrarArchivo();
+    leeArchivo();
+    crearArchivo();
+    reNombrarArchivo();
     //addContenidoArchivo();
     eliminaArchivo();
     console.clear();
@@ -34,19 +36,26 @@ let err, contenido,error,xErr,errX;
 
     function crearArchivo()//Crea un archivo
     {
-        fs.createWriteStream('archivoX2.txt',{'flags':'a'},(r)=>{
+        fs.createWriteStream('archivoX.txt',{'flags':'a'},(r)=>{
             if(r)
             {
                 throw r;
             }
-            console.log('-Archivo creado!'.magenta.bold);
-        });
+            console.log('-Archivo creado!'.magenta.bold);});
+
+            fs.writeFile('archivoX2.txt','contenido nuevo',(rr)=>{//Otra forma de crear un archivo
+                if(rr)
+                {
+                    throw rr;
+                }
+            console.log('-Otro archivo creado'.cyan);
+            });
     }
 
     function reNombrarArchivo() //Cambiar nombre a un archivo:
     {
         // fs.rename('nombre del archivo','nombre nuevo del archivo', función de control);
-        fs.rename('fileSistema.txt','fileSystem.txt',(error)=>{
+        fs.rename('fileSystem.txt','fileSistema.txt',(error)=>{
         //fileSistema
         if(error)
         {
@@ -65,12 +74,12 @@ let err, contenido,error,xErr,errX;
         console.log('-se ha modificado el archivo');});
     }
 
-function eliminaArchivo()//Eliminar un archivo:
-{
-    fs.unlink('archivoX.txt',(xErr)=>{
-        if(xErr)
-        {
-            throw xErr;
-        }
-        console.log('-Se ha eliminado el archivo'.bgYellow);});
-}
+    function eliminaArchivo()//Eliminar un archivo:
+    {
+        fs.unlink('archivoX.txt',(xErr)=>{
+            if(xErr)
+            {
+                throw xErr;
+            }
+            console.log('-Se ha eliminado el archivo'.bgYellow);});
+    }
