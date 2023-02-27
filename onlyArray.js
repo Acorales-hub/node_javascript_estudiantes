@@ -29,8 +29,6 @@ try
     showSizeArray();//Mustra el tamaño de los arrglos definidos en la declaración de variables.
     //forOf();
     //forIn();
-
-
 }catch(err){
         console.log('Sorry!'.bold.red);
         console.error('Ha ocurrido un error!'+err.name);
@@ -61,7 +59,7 @@ function showFruit()
     console.log('----------------------------------------------------'.rainbow)
     console.log("Tabla 03");
     fruit[1]='Lechoza';//Reemplazo de valor en el índice 1
-    fruit[2]='Coco';//Reemplazo de valor en el índice 1
+    fruit[2]='Coco';//Reemplazo de valor en el índice 2
     console.table(fruit);//Muestra el contenido del vector.
     console.log('Observación'.cyan.underline+': Elemento en índice 1: '+fruit[1].yellow+', elemnto en índice 2: '+fruit[2].yellow+',Tamaño del vector:'+fruit.length);
 }
@@ -116,7 +114,7 @@ function forOf(){
     {
         console.log(vector);
     }
-    /*for..of no da acceso al número del elemento en curso, 
+    /*for..of nos da acceso al número del elemento en curso, 
     solamente a su valor, pero en la mayoría de los casos 
     eso es suficiente. Y es más corto.*/
 }

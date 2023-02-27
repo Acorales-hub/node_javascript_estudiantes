@@ -1,6 +1,6 @@
 /*[.::Javascript para estudiantes::.]---------------------------------------------------
 |Profesor: Ing. Asdrubal José Corales Pérez, +58-4811678, asdrubalcorales92@gmail.com  |
-|Tema: Usos del modulo console                                                         |
+|Tema: Usos del módulo console                                                         |
 --------------------------------------------------------------------------------------*/
 
 //Declaración de variables más archivos y/o modulos externos:
