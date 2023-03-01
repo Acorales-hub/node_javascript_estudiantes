@@ -1,0 +1,10 @@
+{
+    "nombre":"Asdrubal José Corales Pérez",
+    "telefono":"+584124811678",
+    "hobbies":["natación","escalda"],
+    "estudios":{
+                "pregrado":"Ing. Informática",
+                "diplomado":"Ing. de procesos"
+            },
+    "casado": true
+}
