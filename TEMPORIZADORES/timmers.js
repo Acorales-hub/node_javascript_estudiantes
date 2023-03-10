@@ -1,4 +1,9 @@
+/*[.::Javascript para estudiantes::.]---------------------------------------------------
+|Profesor: Ing. Asdrubal José Corales Pérez, +58-4811678, asdrubalcorales92@gmail.com  |
+|Tema: Uso de los Teporizadores                                                        |
+--------------------------------------------------------------------------------------*/
 
+//Packages (paquetes externos), variables
 const color = require('colors');
 let nomFusion;
 let retraso;
